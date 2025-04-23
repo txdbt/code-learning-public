@@ -36,3 +36,34 @@ def user_info(**kwargs):
     print(f"kwargs參數的類型是:{type(kwargs)},内容是:{kwargs}")
 
 user_info(name='jelly',age=19,gender='boy',addr='beijing')
+
+
+#函數作爲參數傳遞
+def test_func(compute):
+    result = compute(3,4)
+    print(f"compute參數的類型是:{type(compute)}")
+    print(f"計算結果：{result}")
+
+
+def compute(x,y):
+    return x*y
+
+test_func(compute)    
+
+
+#lambda匿名函數
+"""
+lambda 傳入參數： 函數體（一行代碼）
+
+傳入參數表示匿名函數的形式參數
+
+函數體就是函數的執行邏輯-----只能寫一行代碼
+
+
+"""
+
+def test_func(compute):
+    result = compute(1,2)
+    print(f"結果為:{result}")
+
+test_func(lambda x,y:x + y)
