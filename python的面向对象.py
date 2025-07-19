@@ -27,6 +27,7 @@ employer.pay_salary(employee)"""
 
 class Phone:
     def __init__(self,brand:str,color:str,prize:int) -> None:
+        self.brand = brand
         self.color = color
         self.prize = prize
         self.turned_on: bool = False
@@ -46,10 +47,17 @@ class Phone:
         else:
             print(f"{self.brand} is already turn off")
 
-
+    def useing(self,time:int):
+        if self.turned_on:
+            print(f"{self.brand} has useing for {time} seconds")
+        else:
+            print("please open first")
 
 
 
 
 samsung: Phone = Phone('samsung','blue',10000)
 print(samsung)
+samsung.turn_on()
+samsung.useing(38)
+samsung.turn_off()
